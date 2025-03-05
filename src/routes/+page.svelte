@@ -1,6 +1,4 @@
 <script>
-  import '../lib/styles.css';
-  
   let formData = {
     name: '',
     message: ''
@@ -386,6 +384,7 @@
     </div>
   </div>
 </footer>
+
 
 <style>
   /* Additional page-specific styles */

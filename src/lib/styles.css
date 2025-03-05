@@ -465,14 +465,16 @@ input:focus, textarea:focus, select:focus {
   opacity: 0.6;
 }
 
-/* Footer */
+/* Footer - clean and simple - with !important flags to override any other styles */
 .footer {
-  background: var(--dark-grey);
-  color: var(--white);
-  padding: min(var(--space-xl), 5vh) 0;
-  position: relative;
-  margin-top: auto;
-  flex-shrink: 0;
+  background: var(--dark-grey) !important;
+  color: var(--white) !important;
+  padding: min(var(--space-xl), 5vh) 0 0 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
+  box-sizing: border-box !important;
+  border: none !important;
 }
 
 .footer-content {
@@ -1723,4 +1725,33 @@ body {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
+}
+
+/* Reset for consistent rendering */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Body has no padding or margin */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Footer should be at the bottom with no extra space */
+.footer {
+  margin-top: auto;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  padding: min(var(--space-xl), 5vh) 0 0 0;
+  border-bottom: 0;
 }
